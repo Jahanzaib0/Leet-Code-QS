@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <p>jaj</p>
+        <p>as</p>
+    </div>
+</body>
+<script>
+    let i = document.getElementById("div")
+    let d = document.createElement("p");
+    let t = document.createTextNode("Hello Jazzy");
+    let para = d.appendChild(t);
+//    if you want to appear paralast in div ;
+    i.appendChild(para); 
+    //  if you want to appear para any where in div;
+    let div2c =  i.childNodes[2];
+    // i.insertBefore(para, div2c);
+    // if you want to remove the child;
+let rd = i.childNodes[3];
+i.removeChild(rd);
+
+
+</script>
+</html>

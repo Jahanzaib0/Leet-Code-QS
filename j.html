@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 2 kangroos are jump 
+    //x is use for location
+    // y is use for meter per jump
+    // 
+    
+    function j(x1, v1, x2, v2){
+      if ((x1 > x2) && (v1 > v2) && (x1 < x2) && (v1 < v2) && (v1 == v2)) {
+        console.log("NO");
+      }
+      
+      else if ((x2 - x1) % (v1 - v2) == 0) {
+        console.log("Yes");
+      }
+      
+    }
+    j(2, 1, 1, 2);
+    // j(0, 3, 4, 2);
+    // alternate function 
+    function kangaroo(x1, v1, x2, v2) {
+ return v2 < v1 && (x2 - x1) % (v1 - v2) === 0 ? "YES" : "NO";
+      
+    }
+    
+
+</script>
+</html>

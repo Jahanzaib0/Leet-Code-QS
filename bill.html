@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function bonAppetit(bill, k, b) {
+    // Write your code here
+    let result = ''
+    bill.splice(k,1)
+    const billCost = bill.reduce((previous, next) => previous+next, 0) / 2
+    if (billCost == b){
+        result = 'Bon Appetit'
+    } else {
+        result = b - billCost
+    }
+    console.log(result)
+
+} 
+</script>
+</html>

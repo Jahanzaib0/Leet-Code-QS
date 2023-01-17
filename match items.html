@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ar = [1, 2, 1, 2, 1, 3, 2];
+    // ar = [1, 2, 1, 2, 1, 3, 2];
+    var filterValues;
+    function sockMerchant(n, ar) {
+    // Write your code here
+    const uniqueValues = [... new Set(ar)]
+    let count = 0
+    uniqueValues.forEach(value => {
+        filterValues = ar.filter(element => element == value);
+        const pairsNumber = Math.floor(filterValues.length / 2);
+        count += pairsNumber;
+       
+    })
+    return count 
+}
+console.log(sockMerchant(8, [1, 2, 1, 2, 1, 3, 2]));
+   
+</script>
+</html>

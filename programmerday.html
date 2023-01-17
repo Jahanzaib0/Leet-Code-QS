@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function dayOfProgrammer(year) {
+    if (year === 1800 || year === 1900 || year === 1700) return "12.09." + year;
+  if (year === 1918) return "26.09." + year;
+  let leap = new Date(year, 1, 29).getDate() === 29;
+  console.log(year + " : " + leap);
+  return leap === true ? "12.09." + year : "13.09." + year;
+
+}
+console.log(dayOfProgrammer(2056));
+</script>
+</html>

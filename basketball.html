@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function breakingRecords(scores) {
+    let hs = scores[0], ls = scores[0], max = 0, min = 0;
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] > hs) {
+            hs = scores[i];
+            max += 1;
+        }
+        if (scores[i] < ls) {
+            ls = scores[i];
+            min += 1;
+        }
+    }
+    return [max, min];
+}
+console.log(breakingRecords([3, 4, 21, 36, 10, 28, 35, 5, 24, 42]));
+</script>
+</html>

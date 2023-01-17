@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let text = prompt("change");
+text = text.toLocaleLowerCase();
+ for (let i = 0; i < text.length; i++) {
+ if (text.slice(i, i + 12) === "world war ii") {
+    // isme slice method do dafa q use hua ?
+    // text = text.slice(0, i) + "the Second World War" + text.slice(i + 12);
+    text = text.replace("world war ii", "second world war");
+ }
+}
+alert(text);
+// - 1 q he ?
+let firstChar = text.indexOf("World War II");
+ if (firstChar !== -1) {
+ text = text.replace(/world war ii/g, "second world war");
+ }
+</script>
+</html>

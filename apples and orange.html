@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>function countApplesAndOranges(s, t, a, b, apples, oranges) {
+    let appleCount = 0;
+    let orangeCount = 0;
+    for (let i = 0; i < apples.length; i++) {
+        if (a + apples[i] >= s && a + apples[i] <= t) {
+            appleCount++;
+        }
+    }
+    for (let j = 0; j < oranges.length; j++) {
+        if (b + oranges[j] <= t && b + oranges[j] >= s) {
+            orangeCount++;
+        }
+    }
+    console.log(appleCount);
+    console.log(orangeCount);
+}
+</script>
+</html>

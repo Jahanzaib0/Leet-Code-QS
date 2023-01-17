@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // sample time 12:1:00PM
+        function timeConversion(s){
+            s = s.split(":");
+            //split breaks 12--- 1--- 00 
+            // 12 -0 , 1 -- 1, 00PM ---2
+            let hourse = parseInt(s[0]);
+            let tF = s[2].slice(2);
+            let sec = s[2].slice(0, 2);
+            if ((tF === "PM") && (hourse !== 12)) {
+                hours = hourse + 12;
+            }
+            if ((tF === "AM") && (hourse === 12)){
+                hours = "00";
+            }
+            else if(hours < 10) {
+                hours = "0" + hours.toString();
+            }
+            else{
+                hours = hours.toString();
+            }
+            console.log(`${hours}:${s[1]}:${sec}`);
+        }
+          timeConversion("07:05:45PM");
+          // copy from internet
+          /* let militaryTime = 0, militaryHour = 0, timeFormatPm = {}, timeFormatAm = {};
+    timeFormatPm = {
+        '01': 13,
+        '02': 14,
+        '03': 15,
+        '04': 16,
+        '05': 17,
+        '06': 18,
+        '07': 19,
+        '08': 20,
+        '09': 21,
+        '10': 22,
+        '11': 23,
+        '12': 12
+    }
+    timeFormatAm = {
+        '12': '00'
+    }
+
+    if ('PM' == s.substring(s.length - 2, s.length)) {
+        militaryHour = timeFormatPm[s.substring(0, 2)];
+    }
+    else if ('AM' == s.substring(s.length - 2, s.length) && 12 == s.substring(0, 2)) {
+        militaryHour = timeFormatAm[s.substring(0, 2)];
+    } else {
+        militaryHour = s.substring(0, 2);
+    }
+    militaryTime = (militaryHour + s.substring(2, s.length - 2));
+    return militaryTime;
+*/
+    </script>
+</body>
+</html>

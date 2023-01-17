@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//     function birthdayCakeCandles(candles) {
+//     let counter = 0;
+//     let max = Math.max(...candles);
+//     console.log(max);
+//     candles.forEach((value)=>{
+//       if (max === value) {
+//           counter ++;
+//       }
+//     });
+//       return counter;
+// }
+// alternative way to do
+function birthdayCakeCandles(candles){
+    let max = Math.max(...candles);
+    return  candles.filter(value => value === max).length;
+    
+} 
+console.log(birthdayCakeCandles([8, 3, 6, 8, 2]));
+</script>
+</body>
+</html>

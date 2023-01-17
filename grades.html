@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function gradingStudents(grades) {
+    let op = [];
+    grades.forEach((e, i)=>{
+        if (e >= 38) {
+            let remainder = grades[i] % 5;
+            if (remainder === 3) {
+                op.push(grades[i] + 2);
+            }
+            else if (remainder === 4) {
+                op.push(grades[i] + 1);
+            }
+            else{
+                op.push(grades[i]);
+            }
+        }
+        else{
+            op.push(grades[i]);
+        }
+    });
+    return op;
+
+}
+
+</script>
+</html>
